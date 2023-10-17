@@ -5,18 +5,27 @@ from PIL import Image
 import matplotlib.pyplot as plt
 import plotly.express as px
 
-df = pd.read_csv('./dataset/Men Test Team Batting Stats.csv')
-
-st.title("Team Batting Stats - Men")
+st.title("Team Stats")
 st.subheader("Developed by Manan Sharma")
 st.divider()
 
-country = "England"
+st.title("Men - Batting")
+
+df = pd.read_csv('./dataset/Men Test Team Batting Stats.csv')
+
+country = st.selectbox("Country", df['Country'])
 
 column1, column2 = st.columns([1,1], gap="small")
 
 with column1:
-    country = st.selectbox("Country", df['Country'])
+    format = st.selectbox("Format", ["Tests", "ODIs","T20is"])
+    if format == "Tests":
+        df = pd.read_csv('./dataset/Men Test Team Batting Stats.csv')
+    if format == "ODIs":
+        df = pd.read_csv('./dataset/Men ODI Team Batting Stats.csv')
+    if format == "Tests":
+        df = pd.read_csv('./dataset/Men T20I Team Batting Stats.csv')
+
     file = './flags/' + country + '.webp'
     st.image(file)
     st.header(country)
