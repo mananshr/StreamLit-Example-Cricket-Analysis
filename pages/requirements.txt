@@ -1,0 +1,6 @@
+pandas
+streamlit
+numpy
+from PIL
+matplotlib
+plotly
