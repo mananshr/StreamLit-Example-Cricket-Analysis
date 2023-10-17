@@ -1,8 +1,6 @@
 import pandas as pd
 import streamlit as st
 import numpy as np
-from PIL import Image
-import matplotlib.pyplot as plt
 import plotly.express as px
 
 st.set_page_config(page_title="CricStats", page_icon="🏏")
