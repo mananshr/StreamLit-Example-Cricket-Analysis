@@ -37,7 +37,7 @@ with tab1:
 
     columns = country_df.columns
 
-    column1, column2, column3  = st.columns([1, 1, 2], gap='small')
+    column1, column2, column3  = st.columns(3, gap='small')
 
     with column1:
         st.metric(columns[0], country_df.get(columns[0]), delta_color="off")
@@ -48,14 +48,13 @@ with tab1:
     with column3:
         st.metric(columns[2], country_df.get(columns[2]), delta_color="off")    
 
-    column1, column2  = st.columns(2, gap='small')    
+    column1, column2 = st.columns([1, 2], gap='small')    
 
     with column1:
-        st.metric(columns[4], country_df.get(columns[4]), delta_color="off")
+        st.metric(columns[3], country_df.get(columns[3]), delta_color="off")
     
     with column2:
-        st.metric(columns[3], country_df.get(columns[3]), delta_color="off")
-
+        st.metric(columns[4], country_df.get(columns[4]), delta_color="off")
 
 with tab2:
 
@@ -81,11 +80,10 @@ with tab2:
     country_df = df.loc[df['Country']==country]
 
     country_df = country_df.drop(['Country'], axis=1)
-
-    
+  
     columns = country_df.columns
 
-    column1, column2, column3  = st.columns([1, 1, 2], gap='small')
+    column1, column2, column3  = st.columns(3, gap='small')
 
     with column1:
         st.metric(columns[0], country_df.get(columns[0]), delta_color="off")
@@ -96,13 +94,13 @@ with tab2:
     with column3:
         st.metric(columns[2], country_df.get(columns[2]), delta_color="off")    
 
-    column1, column2  = st.columns(2, gap='small')    
+    column1, column2 = st.columns([1, 2], gap='small')    
 
     with column1:
-        st.metric(columns[4], country_df.get(columns[4]), delta_color="off")
+        st.metric(columns[3], country_df.get(columns[3]), delta_color="off")
     
     with column2:
-        st.metric(columns[3], country_df.get(columns[3]), delta_color="off")
+        st.metric(columns[4], country_df.get(columns[4]), delta_color="off")
 
 with tab3:
     
@@ -131,10 +129,7 @@ with tab3:
 
     columns = country_df.columns
 
-
-    columns = country_df.columns
-
-    column1, column2, column3  = st.columns([1, 1, 2], gap='small')
+    column1, column2, column3  = st.columns(3, gap='small')
 
     with column1:
         st.metric(columns[0], country_df.get(columns[0]), delta_color="off")
@@ -145,10 +140,10 @@ with tab3:
     with column3:
         st.metric(columns[2], country_df.get(columns[2]), delta_color="off")    
 
-    column1, column2  = st.columns(2, gap='small')    
+    column1, column2 = st.columns([1, 2], gap='small')    
 
     with column1:
-        st.metric(columns[4], country_df.get(columns[4]), delta_color="off")
+        st.metric(columns[3], country_df.get(columns[3]), delta_color="off")
     
     with column2:
-        st.metric(columns[3], country_df.get(columns[3]), delta_color="off")
+        st.metric(columns[4], country_df.get(columns[4]), delta_color="off")
