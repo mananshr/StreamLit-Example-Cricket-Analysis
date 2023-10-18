@@ -10,7 +10,7 @@ st.set_page_config(page_title="CricStats", page_icon="🏏")
 st.title("Team Stats - Batting")
 st.subheader("Developed by Manan Sharma")
 
-tab1, tab2, tab3 = st.tabs(["Tests", "ODIs","T20is"])
+tab1, tab2, tab3 = st.tabs(["Tests", "ODIs","T20Is"])
 
 with tab1:   
 
